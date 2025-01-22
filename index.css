@@ -1,519 +1,368 @@
-body{
+body {
     height: 100%; 
     margin: 0;
-    background-image: radial-gradient(circle,rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 1));
-    background-size: cover;
-    background-position: center;
+    background-image: url('https://i.pinimg.com/736x/30/8f/2f/308f2fd627c36e007527bc50337f6c7b.jpg');
+    background-size: 1450px;
     background-repeat: no-repeat;
+    background-position: fixed;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: white;
 }
-header{   
-    background-image: radial-gradient(circle, rgb(211, 211, 211), rgb(169, 169, 169));
-    margin-top: 1px;
+
+header {
     padding-top: 30px;
     height: 55px;
 }
-header div{
+
+#headings nav ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#name h3{
-    margin: 0;
-    color: black;
-    font-family:Arial, Helvetica, sans-serif;
-    margin-top: -12px;
-    margin-left: 20px;
-    font-size: 40px;
-    font-weight: 900;
-}
-#name h3:hover{
-    color: black;
-}
-#headings nav ul{
+    gap: 70px;
+    margin-left: 110px;
     list-style: none;
-    padding-left: 20px;
-    margin: 0;
-    display: flex;
-    margin-right: 35px;
-    gap: 75px;
 }
-#headings nav ul li a{
-    font-family:Arial, Helvetica, sans-serif;
+
+#headings nav ul li a {
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 550;
-    font-size:15px;
+    font-size: 15px;
     text-decoration: none;
-    color: rgb(41, 41, 41);
+    color: rgb(152, 32, 66);
     display: inline-block; 
     transition: color 0.3s, transform 0.3s;
 }
-#headings nav ul li a:hover{
-    color: black;
-    transform: scale(1.5);
+
+#headings nav ul li a:hover {
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
-#Home{
+
+#Home {
     text-align: center;
     padding-top: 75px;
     padding-bottom: 75px;
+    transition: transform ;
 }
-#title pre{
-    font-family:Arial, Helvetica, sans-serif;
+
+#title pre {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
     font-weight: 900;
     color: whitesmoke;
     display: inline-block;
-    margin-top: 40px;
-    margin-left: -900px;  
+    margin-top: 60px;
+    margin-left: -1200px;  
 }
- 
-#student
-{
-    color: #9c9595;
+
+#About #img1 img {
+    border-radius: 750px;
+    height: 350px;
+    width: 350px;
+    box-shadow: white, 2px, 4px, 3px;
+    border: 13px solid white;
 }
-#tagline{
-    color: whitesmoke;
-    font-weight: 600;
-    margin-top: 10px;
-    padding: 15px;
-    border: 2px solid black;
-    border-radius: 8px;
-    max-width: 80%;
-    margin-left: 115px;
-    animation-name: Blink;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+
+#img1 {
+    margin-left: 500px;
 }
-@keyframes Blink{
-    0%{
-    box-shadow: 0px 0px 3px 3px white;
+
+#about {
+    margin-left: 250px;
+    text-decoration: underline;
+    text-decoration-color: rgb(152, 32, 66);
+    text-decoration-thickness: 14px;
+}
+#About {
+    opacity: 0;  
+    transform: translateY(50px);  
+    transition: all 1.3s ease-in-out;  
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px; 
+}
+#About:target {
+    opacity: 1; 
+    transform: translateY(0);  
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);  
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);  
     }
 }
-#one{
-    font-size: 25px;
-}
-#two{
-    font-size: 40px;
+
+#para {
+    text-align: center;
+    font-weight: 530;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 50px;
+    padding-left: 10px;
+    font-size: medium;
 }
 
-#aboutme #hdg h2{
-    text-align: center;
-    color: rgb(0, 0, 0);
-    padding-top: 20px;
-
-    font-size: 35px;
-    font-family:Arial, Helvetica, sans-serif;
-    transition: color 0.3s;
-}
-#aboutpage{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    margin: 20px;
-}
-
-#aboutimg img{
-    width: 450px;
-    height: 450px;
-    border-radius: 20%;
-    border: 3px solid black;
-}
-
-#aboutme #desp{
-    border-radius: 8%;
-    height: 300px;
-    width: 500px;
-    text-align: center;
-    margin-top: 15px;
-    margin-left: 50px;
-    line-height: 30px;
-    padding: 20px;
-    padding-top: 55px;
-    color: white;
-    font-family: cursive;
-    font-style: italic;
-    font-size: 18px;
-}
-#Skills #skillpage #skillhead h2{
-    background-image: radial-gradient(circle, rgb(211, 211, 211), rgb(169, 169, 169));
-    text-align: center;
-    color: rgb(0, 0, 0);
-    padding-top: 20px;
-    height: 70px;
-    width: 100%;
-    font-size: 35px;
-    font-family:Arial, Helvetica, sans-serif;
-    transition: color 0.3s;
-}
-#allskills{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 175px;
-    flex-wrap: wrap;
-}
-#allskills div{
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    margin-top: 125px;
-    margin-bottom: 125px;
-}
-#allskills img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-#allskills img:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 6px 10px white;
-}
-#Projects{
-    text-align: center;
+#Skills {
+   
+    transform: translateY(50px);  
+    transition: all 1s ease-in-out;  
+    background-color: rgba(255, 255, 255, 0);  
     padding: 50px 20px;
-}
-#Projects #projectheading h2{
-    background-image: radial-gradient(circle, rgb(211, 211, 211), rgb(169, 169, 169));
+    margin: 50px auto;
     text-align: center;
-    color: rgb(0, 0, 0);
-    padding-top: 20px;
-    margin-top: 1px;
-    height: 70px;
-    width: 100%;
-    font-size: 35px;
-    font-family: cursive;
-}
-#Projects #allproj{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 100px;
-}
-#Projects #allproj div{
-    display: inline-block;
-    width: 400px;
-    height: 350px;
-    margin: 0 50px 85px 50px; 
-    border: 2px solid #ddd;
-    background-color: #fff;
-    border-radius: 8%;
-    text-align: center;
-}
-#Projects #allproj div h4{
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
-    font-family: cursive;
-}
-#Projects #allproj div p{
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-    text-wrap: wrap;
-    padding: 15px;
-    margin-top: 7px;
-}
-#Projects #allproj div .btn{
-    height: 50px;
-    width: 125px;
-    margin-top: -35px;
-    margin-left: -17px;
-    font-size: 16px;
-    font-family: cursive;
-    font-weight: bold;
-    text-align: center;
-    color: #fff;
-    background-color: #007BFF;
-    border-radius: 8px;
-}
-#Projects #allproj div .btn:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 3px 3px grey;
-}
-#Education{
-    text-align: center;
-    padding-top: 75px;
-    padding-bottom: 75px;
-    margin-bottom: 50px;
-}
-#eduvalues a{
-    text-decoration: none;
-    color: rgb(41, 41, 41);
-}
-#eduheading h2{
-    background-image: radial-gradient(circle, rgb(211, 211, 211), rgb(169, 169, 169));
-    text-align: center;
-    color: rgb(0, 0, 0);
-    padding-top: 20px;
-    margin-top: 1px;
-    height: 70px;
-    width: 100%;
-    font-size: 35px;
-    font-family: cursive;
-}
-#eduvalues{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-#eduvalues div{
-    text-align: center;
-    width: 300px;
-    padding: 20px;
-    margin-top: 50px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    box-shadow: 0px 0px 3px 3px black;
-}
-#eduvalues img{
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    border: 2px solid white;
-}
-#eduvalues p{
-    margin: 10px 0;
-    font-size: 18px;
-    font-weight: bold;  
-    font-family: cursive;  
-}
-#Achievements #certheading h2{
-    background-image: radial-gradient(circle, rgb(211, 211, 211), rgb(169, 169, 169));
-    text-align: center;
-    color: rgb(0, 0, 0);
-    padding-top: 20px;
-    margin-top: 1px;
-    height: 70px;
-    width: 100%;
-    font-size: 35px;
-    font-family: cursive;
-}
-#move{
-    overflow-x: scroll;
-    white-space: nowrap;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-
-}
-#move .slide{
-    flex: 0 0 50%;
-    height: 251px;
-    margin-left: 35px;
-    margin-bottom: 55px;
-    padding: 15px;
-    border-radius: 15px;
-    text-align: center;
-    background-color: #f9f9f9;
-    transition: transform 0.3s ease-in-out;
-    border: 2px solid black;
-    scroll-snap-align: center;
-}
-#move .slide:hover{
-    box-shadow: 0px 0px 3px 3px grey;
-}
-#move .slide .a1{
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 27px;
-    font-weight: 50px;
-    color: #2c3e50;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    text-wrap: wrap;
-}
-
-#move .slide .a2{
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    text-wrap: wrap;
-    font-size: 25px;
-    line-height: 1.5;
-    margin-top: 25px;
-    font-style: italic;
-}
-#Coding{
-    text-align: center;
-    padding: 50px 20px;
-}
-#codehead h2{
-    background-image: radial-gradient(circle, rgb(211, 211, 211), rgb(169, 169, 169));
-    text-align: center;
-    color: rgb(0, 0, 0);
-    padding-top: 20px;
-    margin-top: 1px;
-    height: 70px;
-    width: 100%;
-    font-size: 35px;
-    font-family: cursive;
-}
-#codevalues{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 125px;
-    flex-wrap: wrap;
-}
-#codevalues div{
-    width: 120px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-#codevalues div:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 8px 16px rgba(0, 123, 255, 0.5);
-}
-#codevalues div img{
     width: 80%;
-    height: 80%;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
 }
-#codevalues div img:hover{
-    transform: scale(1.1);
+ 
+#Skills:target {
+    opacity: 1;  
+    transform: translateY(0);  
 }
-#codevalues div a{
-    text-decoration: none;
-}
-#Contact{
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-#Contact #conhead{
-    background-image: radial-gradient(circle, rgb(211, 211, 211), rgb(169, 169, 169));
-    text-align: center;
-    color: rgb(0, 0, 0);
-    padding-top: 20px;
-    margin-top: 1px;
-    height: 70px;
-    width: 100%;
-    font-size: 35px;
-    font-family: cursive;
-}
-#Contact h2{
-    margin-top: 2px;
-    font-size: 25px;
-    margin-bottom: 30px;
-    /* color: wheat; */
-    font-family: cursive;
-}
-#form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#form form{
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 8%;
-    box-shadow: 0px 0px 3px 3px grey;
-    max-width: 400px;
-    width: 100%;
-}
-#form input,#form textarea{
-    margin-top: 15px;
-    width: 325px;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: lightgray;
-}
-#form button{
-    background-color: lightgray;
-    color: black;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: cursive;
-    font-weight: 1000;
-    transition: transform 0.3s;
-}
-#form button:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 0px 4px 4px white;
-}
-#links{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-    padding: 20px;
-}
-#links div{
-    text-align: center;
-    transition: transform 0.3s;
-}
-#links div:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 3px 3px black;
-}
-#links img{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    transition: border-color 0.3s ;
-}
-#links img:hover{
-    border-color: #00aaff;
-    box-shadow: 0px 0px 3px 3px rgb(0, 170, 255);
-}
-#links a{
-    text-decoration: none;
-    display: inline-block;
-}
-#links a:hover{
-    opacity: 0.8;
-}
-#download-resume {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-#download-resume a{
-    font-family: 'Cursive', sans-serif;
+
+#skills-heading {
     font-size: 20px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border: 2px solid whitesmoke;
-    border-radius: 5px;
-    transition: transform 0.3s;
+    text-decoration: underline;
+    text-decoration-color: rgb(152, 32, 66);
+    text-decoration-thickness: 3px;
+    color: whitesmoke;
+    margin-bottom: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-#download-resume a:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 0px 4px 4px white;
+
+#skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    -ms-progress-appearance: red;
 }
-#rights{
-    text-align: center;
-    margin-top: 30px;
-    padding: 20px;
-    background-color: lightgray;
-    color: black;
-    font-family: Arial, sans-serif;
-    margin-bottom: 0px;
+
+.skill {
+    width: 80%;
+    text-align: left;
 }
-#rights h4{
+
+.skill p {
     margin: 0;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 17.5px;
+    font-weight: bold;
+    color: rgb(127, 103, 110);
 }
+
+.skill-bar {
+    background-color: rgb(230, 230, 230);
+    height: 7px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+    position: relative;
+}
+.skill-progress {
+    height: 100%;
+    background-color: rgb(152, 32, 66);
+    border-radius: 20px 0 0 20px;
+    animation: growBar 1.5s ease-in-out;
+}
+@keyframes growBar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;  
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth;
+}
+
+#Projects {
+    padding: 50px 20px;
+    margin: 50px auto;
+    text-align: center;
+    height: 100%;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+    transform: translateY(50px); 
+    transition: all 1s ease-in-out;
+}
+
+#Projects:target {
+    opacity: 1;
+    transform: translateY(0);  
+}
+ 
+#projects-heading {
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color: rgb(152, 32, 66);
+    text-decoration-thickness: 3px;
+    color: rgb(152, 32, 66);
+    margin-bottom: 30px;
+}
+
+#projects-slideshow {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    padding: 70px;
+    scroll-behavior: smooth;
+}
+
+.project-slide {
+    min-width: 300px;
+    max-width: 30px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: left;
+}
+.project-slide h3 {
+    font-size: 19;
+    color: rgb(152, 32, 66);
+    margin-bottom: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.project-slide p {
+    font-size: 19px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.view-project-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 10px;
+    color: #fff;
+    background-color: rgb(152, 32, 66);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    width: 100px;
+}
+
+.view-project-btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; 
+}
+
+#Contact {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.info-box {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    height: 20px;
+    width: 450px;
+}
+
+.info-box .icon {
+    font-size: 1.5rem;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #1e1e1e;
+    color: #ffffff;
+    font-size: 1rem;
+    height: 20px;
+    width: 450px;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #862044;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    height: 60px;
+    width: 90px;
+}
+
+.contact-form button:hover {
+    background: #950739;
+}
+ 
+
+
